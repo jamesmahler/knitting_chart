@@ -1,13 +1,14 @@
 [package]
-name = "knitting_pattern"
+name = "knitting_chart"
 version = "0.1.0"
 authors = ["James Mahler <james.mahler@gmail.com>"]
 edition = "2018"
-description = "Compiles a pattern from file containing stitch text."
+description = "Compiles a knitting chart from file containing stitch pattern."
 readme = "README.md"
-homepage = "https://github.com/jamesmahler/knitting_pattern"
+homepage = "https://github.com/jamesmahler/knitting_chart"
 license-file = "LICENSE"
 keywords = ["knitting", "knit"]
 
 [dependencies]
-knitting_parse = "0.1.3"
+knitting_parse = "0.2.1"
+png = "0.16.7"
