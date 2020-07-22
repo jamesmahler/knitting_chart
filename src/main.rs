@@ -5,7 +5,8 @@ use std::{error::Error, fs::File, io::BufWriter, path::Path};
 mod image;
 
 fn main() -> Result<(), Box<dyn Error>> {
-    let in_file = File::open("test.knit")?;
+    let in_file_naem = std::env::args().nth(1).expect("Usage: ./knitting_chart <file>");
+    let in_file = File::open(in_file_naem)?;
     let pattern = Pattern::new(in_file)?;
 
     let path = Path::new("test.png");
