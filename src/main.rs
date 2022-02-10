@@ -18,7 +18,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let pixel_height = pattern.lines().len() * 32;
 
     let mut encoder = png::Encoder::new(writer, pixel_width as u32, pixel_height as u32);
-    encoder.set_color(png::ColorType::RGBA);
+    encoder.set_color(png::ColorType::Rgba);
     encoder.set_depth(png::BitDepth::Eight);
 
     let mut writer = encoder.write_header()?;

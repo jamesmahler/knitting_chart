@@ -89,9 +89,9 @@ const IMG_YO: &'static [u8] = include_bytes!("yo.png");
 fn load_image(bytes: &[u8]) -> Result<Vec<u8>, Box<dyn Error>> {
     let decoder = Decoder::new(bytes);
 
-    let (info, mut reader) = decoder.read_info()?;
+    let mut reader = decoder.read_info()?;
 
-    let mut buf = vec![0; info.buffer_size()];
+    let mut buf = vec![0; reader.output_buffer_size()];
     reader.next_frame(&mut buf)?;
 
     Ok(buf)

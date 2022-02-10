@@ -1,6 +1,6 @@
 [package]
 name = "knitting_chart"
-version = "0.2.1"
+version = "0.2.2"
 authors = ["James Mahler <james.mahler@gmail.com>"]
 edition = "2021"
 description = "Compiles a knitting chart from file containing stitch pattern."
@@ -11,4 +11,4 @@ keywords = ["knitting", "knit"]
 
 [dependencies]
 knitting_parse = "0.3"
-png = "0.16"
+png = "0.17"
